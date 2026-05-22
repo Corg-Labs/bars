@@ -2,3 +2,4 @@ bars
 *.test
 *.o
 *.dSYM
+*.recheck
