@@ -1,3 +1,4 @@
+=== bars ===
 /*
  * bars.c - Animated sorting algorithm visualizer in C
  *
@@ -220,3 +221,4 @@ int main(void) {
     }
     return 0;
 }
+
