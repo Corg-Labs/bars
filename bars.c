@@ -1,4 +1,3 @@
-=== bars ===
 /*
  * bars.c - Animated sorting algorithm visualizer in C
  *
@@ -190,7 +189,7 @@ static void merge_h(int lo, int hi) {
     for (int x = 0; x < k; x++) state[lo + x] = (hi - lo + 1 == N) ? 3 : 0;
 }
 
-static void mergesort(void) {
+static void my_mergesort(void) {
     merge_h(0, N - 1);
     mark_all_sorted();
 }
@@ -200,7 +199,7 @@ int main(void) {
     srand((unsigned)time(NULL));
     printf("\x1b[?25l\x1b[2J");
 
-    void  (*algos[])(void) = { bubble, insertion, selection, quicksort, mergesort };
+    void  (*algos[])(void) = { bubble, insertion, selection, quicksort, my_mergesort };
     int   sleeps[]          = { 3500,   7000,      6500,     35000,     22000 };
     int   n = sizeof algos / sizeof algos[0];
 
